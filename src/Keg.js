@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 function Keg(props) {
   return (
     <React.Fragment>
-      <p>{props.name}</p>
-      <p>{props.brand}</p>
-      <p>{props.price}</p>
-      <p>{props.ABV}</p>
+      <p>Name: {props.name}</p>
+      <p>Brand: {props.brand}</p>
+      <p>Price: ${props.price}</p>
+      <p>ABV: {props.ABV}%</p>
       <p>Quantity (Pints): {props.quantity}</p>
       <button type="submit">Sell</button>
       <button type="submit">Refill</button>

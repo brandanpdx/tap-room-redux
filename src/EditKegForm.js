@@ -8,6 +8,7 @@ function EditKegForm(props) {
 
   function handleEditKegFormSubmission(event) {
     event.preventDefault();
+    console.log("reached handle edit item form submission function");
     props.onEditKeg({
       name: event.target.name.value,
       brand: event.target.brand.value,

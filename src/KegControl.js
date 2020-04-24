@@ -24,7 +24,7 @@ class KegControl extends React.Component {
 
   handleEditingKegInList = (kegToEdit) => {
     const editedMasterKegList = this.state.masterKegList
-      .filter(ticket => ticket.id !== this.state.selectedKeg.id)
+      .filter(keg => keg.id !== this.state.selectedKeg.id)
       .concat(kegToEdit);
     this.setState({
       masterKegList: editedMasterKegList,
@@ -68,6 +68,28 @@ class KegControl extends React.Component {
     }
   }
 
+  handleKegPurchase = (id) => {
+    const currentlySelectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
+    const newQuantityOfKeg = currentlySelectedKeg.quantity - 1;
+    const updatedKeg = { ...currentlySelectedKeg, quantity: newQuantityOfKeg };
+    const previousKegList = this.state.masterKegList.filter(keg => keg.id !== id);
+    this.setState({
+      masterKegList: [...previousKegList, updatedKeg],
+      selectedKeg: updatedKeg
+    });
+  }
+
+  handleKegRefill = (id) => {
+    const currentlySelectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
+    const newQuantityOfKeg = currentlySelectedKeg.quantity + 10;
+    const updatedKeg = { ...currentlySelectedKeg, quantity: newQuantityOfKeg };
+    const previousKegList = this.state.masterKegList.filter(keg => keg.id !== id);
+    this.setState({
+      masterKegList: [...previousKegList, updatedKeg],
+      selectedKeg: updatedKeg
+    });
+  }
+
   render() {
     let currentlyVisibleState = null;
     let buttonText = null;
@@ -93,7 +115,10 @@ class KegControl extends React.Component {
     } else {
       currentlyVisibleState = <KegList
         kegList={this.state.masterKegList}
-        onKegSelection={this.handleChangingSelectedKeg} />
+        onKegSelection={this.handleChangingSelectedKeg} 
+        onKegSelection={this.handleChangingSelectedKeg}
+        onClickingBuy={this.handleKegPurchase}
+        onClickingRefill={this.handleKegRefill} />
       buttonText = "Add new Keg";
     }
 

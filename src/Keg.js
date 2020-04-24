@@ -20,10 +20,8 @@ function Keg(props) {
         <p>Price: ${props.price}</p>
         <p>ABV: {props.ABV}%</p>
         <p>Quantity (Pints): {props.quantity}</p>
-        <div className="buttons">
-          <button type="submit">Sell</button>
-          <button type="submit">Refill</button>
-        </div>
+        <button onClick={() => props.whenSellClicked(props.id)} type="submit">Sell Pint</button>
+        <button onClick={() => props.whenRefillClicked(props.id)} type="submit">Refill Keg</button> 
       </div>
     </div>
     </React.Fragment>
@@ -37,7 +35,9 @@ Keg.propTypes = {
   ABV: PropTypes.number.isRequired,
   quantity: PropTypes.number.isRequired,
   id: PropTypes.string,
-  whenKegClicked: PropTypes.func
+  whenKegClicked: PropTypes.func,
+  whenSellClicked: PropTypes.func,
+  whenRefillClicked: PropTypes.func,
 }
 
 export default Keg; 

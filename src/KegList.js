@@ -22,8 +22,6 @@ function KegList(props) {
   );
 }
 
-
-
 export default KegList; 
 
 

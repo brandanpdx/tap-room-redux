@@ -5,7 +5,9 @@ import { v4 } from 'uuid';
 function handleNewKegFormSubmission(event) {
   event.preventDefault();
   console.log(event.target.name.value);
-  console.log(event.target.description.value);
+  console.log(event.target.brand.value);
+  console.log(event.target.price.value);
+  console.log(event.target.ABV.value);
   console.log(event.target.quantity.value);
 }
 

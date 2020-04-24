@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import Header from './Header.js';
+import KegList from './KegList';
+import './App.css';
+
 
 function App() {
   return (
     <React.Fragment>
       <Header />
+      <KegList />
     </React.Fragment>
   );
 }

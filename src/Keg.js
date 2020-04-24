@@ -8,7 +8,7 @@ function Keg(props) {
       <p>{props.brand}</p>
       <p>{props.price}</p>
       <p>{props.ABV}</p>
-      <p>{props.quantity}</p>
+      <p>Quantity (Pints): {props.quantity}</p>
       <button type="submit">Sell</button>
       <button type="submit">Refill</button>
     </React.Fragment>

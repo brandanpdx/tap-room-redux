@@ -16,32 +16,44 @@ function NewKegForm(props) {
     });
   }
 
+  const newKegFormStyles = {
+    width: '40vw',
+    margin: 'auto auto',
+    backgroundColor: 'transparent',
+    outline: 'none',
+    boxShadow: 'none',
+    padding: '5%',
+    marginBottom: '2%'
+  }
+
 
   return (
     <React.Fragment>
-      <form onSubmit={handleNewKegFormSubmission}>
-        <input
-          type='text'
-          name='name'
-          placeholder='Beer Name' />
-        <input
-          type='text'
-          name='brand'
-          placeholder='Beer Brand' />
-        <input
-          type='number'
-          name='price'
-          placeholder='Beer Price' />
-        <input
-          type='number'
-          name='ABV'
-          placeholder='ABV' />
-        <input
-          type='number'
-          name='quantity'
-          placeholder='Quantity (Pints)' />
-        <button type='submit'>Add Keg</button>
-      </form>
+      <div style={newKegFormStyles}>
+        <form onSubmit={handleNewKegFormSubmission}>
+          <input
+            type='text'
+            name='name'
+            placeholder='Beer Name' />
+          <input
+            type='text'
+            name='brand'
+            placeholder='Beer Brand' />
+          <input
+            type='number'
+            name='price'
+            placeholder='Beer Price' />
+          <input
+            type='number'
+            name='ABV'
+            placeholder='ABV' />
+          <input
+            type='number'
+            name='quantity'
+            placeholder='Quantity (Pints)' />
+          <button type='submit'>Add Keg</button>
+        </form>
+      </div>
     </React.Fragment>
   );
 }

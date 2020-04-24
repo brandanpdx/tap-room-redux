@@ -8,7 +8,9 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      <KegControl />
+      <div className="storeFront">
+        <KegControl />
+      </div>
     </React.Fragment>
   );
 }

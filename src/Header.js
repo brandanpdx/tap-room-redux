@@ -2,7 +2,9 @@ import React from "react";
 
 function Header() {
   return (
-    <h1>Tap Room Inventory</h1>
+    <div className="header">
+      <h1>Tap Room Inventory</h1>
+    </div>
   );
 }
 

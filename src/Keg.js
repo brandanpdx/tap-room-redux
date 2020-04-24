@@ -2,15 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Keg(props) {
+
+  const kegStyles = {
+    height: '200px',
+    width: '200px',
+    border: '1px solid black',
+    borderRadius: '25px',
+    padding: '5%',
+  }
+
   return (
     <React.Fragment>
-      <p>Name: {props.name}</p>
-      <p>Brand: {props.brand}</p>
-      <p>Price: ${props.price}</p>
-      <p>ABV: {props.ABV}%</p>
-      <p>Quantity (Pints): {props.quantity}</p>
-      <button type="submit">Sell</button>
-      <button type="submit">Refill</button>
+      <div style={kegStyles}>
+        <p>Name: {props.name}</p>
+        <p>Brand: {props.brand}</p>
+        <p>Price: ${props.price}</p>
+        <p>ABV: {props.ABV}%</p>
+        <p>Quantity (Pints): {props.quantity}</p>
+        <div className="buttons">
+          <button type="submit">Sell</button>
+          <button type="submit">Refill</button>
+        </div>
+      </div>
     </React.Fragment>
   )
 }

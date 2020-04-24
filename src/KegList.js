@@ -6,7 +6,7 @@ const masterKegList = [
   {
     name: "Boulevard Unfiltered Wheat",
     brand: "Boulevard Brewing Company",
-    price: 8,
+    price: 7,
     ABV: 4.4,
     quantity: 124
   },
@@ -20,7 +20,7 @@ const masterKegList = [
   {
     name: "Coors Light",
     brand: "Coors Brewing Company",
-    price: 5,
+    price: 4,
     ABV: 4.2,
     quantity: 124
   }

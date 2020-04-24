@@ -20,14 +20,14 @@
 
 ##### For macOS:
 If Homebrew is not installed on your computer already, then install Homebrew by entering the following two commands in Terminal:
-* $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-* $ echo 'export PATH=/usr/local/bin:$PATH' >> ~/.bashprofile
+* ```$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"```
+* ```$ echo 'export PATH=/usr/local/bin:$PATH' >> ~/.bashprofile```
 
 Install Git with the following command:
-* $ brew install git
+* ```$ brew install git```
 
 Next, install Node.js by entering the following command in Terminal:
-* $ brew install node
+* ```$ brew install node```
 
 ##### For Windows:
 Please visit the [Node.js website](https://nodejs.org/en/download/) for installation instructions.
@@ -35,14 +35,15 @@ Please visit the [Node.js website](https://nodejs.org/en/download/) for installa
 #### Install this application
 
 Clone this repository via Terminal using the following commands:
-* $ cd desktop
-* $ git clone {url to this repository}
-* $ cd merch-site
+* ```$ cd desktop```
+* ```$ git clone {url to this repository}```
+* ```$ cd merch-site```
+
 Then, confirm that you have navigated to the merch-site project directory by entering "pwd" in Terminal.
 
 Next, install npm at the project's root directory via the following commands:
-* $ npm install
-* $ npm run build
+* ```$ npm install```
+* ```$ npm run build```
 
 Open the contents of the directory in a text editor or IDE of your choice (e.g., to open the contents of the directory in Visual Studio Code on macOS, enter the command "code ." in Terminal).
 

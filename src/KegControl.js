@@ -2,7 +2,7 @@ import React from 'react';
 import NewKegForm from './NewKegForm.js';
 import KegList from './KegList.js';
 import KegDetail from './KegDetail';
-import EditKegForm from './EditKegFrom';
+import EditKegForm from './EditKegForm';
 
 
 class KegControl extends React.Component {

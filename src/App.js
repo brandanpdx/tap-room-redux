@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header.js';
-import KegList from './KegList';
+import KegControl from './KegControl.js';
 import './App.css';
 
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      <KegList />
+      <KegControl />
     </React.Fragment>
   );
 }

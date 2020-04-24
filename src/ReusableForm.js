@@ -42,7 +42,7 @@ function ReusableForm(props) {
   );
 }
 
-ReusableForm.PropType = {
+ReusableForm.propTypes = {
   formSubmissionHandler: PropTypes.func,
   buttonText: PropTypes.string
 };

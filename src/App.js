@@ -10,7 +10,7 @@ function App() {
       <Header />
       <KegControl />
     </React.Fragment>
-  );
+  )
 }
 
 export default App;

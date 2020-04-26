@@ -8,11 +8,11 @@ function KegDetail(props) {
   return(
     <React.Fragment>
       <h1>Keg Detail</h1>
-      <h1>{keg.name}</h1>
-      <p>{keg.brand}</p>
-      <p>{keg.price}</p>
-      <p>{keg.ABV}</p>
-      <p>{keg.quantity}</p>
+      <h1>Name: {keg.name}</h1>
+      <p>Brand: {keg.brand}</p>
+      <p>Price: ${keg.price}</p>
+      <p>ABV: {keg.ABV}%</p>
+      <p>Quantity (Pints): {keg.quantity}</p>
       <button onClick={() => onClickingDelete(keg.id)}>Remove Keg</button>
       <button onClick={props.onClickingEdit}>Update Keg Details</button>
     </React.Fragment>

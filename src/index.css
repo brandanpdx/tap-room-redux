@@ -1,13 +1,12 @@
-/* body {
+body {
   margin: 5%;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   background-color: rgb(79, 151, 192);
   color: #f5f5f5;
-} */
+}
 
-/* input {
+input {
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  color: #f5f5f5;
   width: 70%;
   display: block;
   margin: auto auto;
@@ -88,4 +87,4 @@ button {
   margin-top: 1%;
   font-size: 1.5rem;
   text-decoration: none;
-} */
+}

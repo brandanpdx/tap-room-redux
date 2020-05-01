@@ -1,7 +1,7 @@
-import rootReducer from '../reducers/index';
+import rootReducer from '../../reducers/index';
 import { createStore } from 'redux';
-import formVisibleReducer from '../reducers/form-visible-reducer';
-import kegListReducer from '../reducers/keg-list-reducer';
+import formVisibleReducer from '../../reducers/form-visible-reducer.js';
+import kegListReducer from '../../reducers/keg-list-reducer.js';
 
 let store = createStore(rootReducer);
 

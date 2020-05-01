@@ -1,4 +1,4 @@
-import kegListReducer from '../reducers/keg-list-reducer';
+import kegListReducer from '../../reducers/keg-list-reducer.js';
 
 describe('kegListReducer', () => {
 

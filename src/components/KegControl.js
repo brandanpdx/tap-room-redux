@@ -34,7 +34,6 @@ class KegControl extends React.Component {
   }
 
   handleEditClick = () => {
-    console.log("handleEditClick reached!");
     this.setState({ editing: true });
   }
 
@@ -58,10 +57,8 @@ class KegControl extends React.Component {
   }
 
   handleKegPurchase = (id) => {
-    console.log(id);
+
     const currentlySelectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
-    console.log(currentlySelectedKeg);
-    console.log(this.state.masterKegList);
     const newQuantityOfKeg = currentlySelectedKeg.quantity - 1;
     const updatedKeg = {...currentlySelectedKeg, quantity: newQuantityOfKeg};
     const previousKegList = this.state.masterKegList.filter(keg => keg.id !== id);

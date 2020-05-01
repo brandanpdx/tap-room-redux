@@ -5,6 +5,7 @@ import KegDetail from './KegDetail.js';
 import EditKegForm from './EditKegForm.js';
 import { connect } from 'react-redux';
 import PropTypes from "prop-types";
+import * as a from './../actions';
 
 
 
@@ -18,19 +19,26 @@ class KegControl extends React.Component {
     };
   }
 
+  // handleClick = () => {
+  //   if (this.state.selectedKeg !== null) {
+  //     this.setState({
+  //       selectedKeg: null,
+  //       editing: false
+  //     });
+  //   } else {
+  //     const { dispatch } = this.props;
+  //     const action = {
+  //       type: 'TOGGLE_FORM'
+  //     }
+  //     dispatch(action);
+  //   }
+  // }
+
   handleClick = () => {
-    if (this.state.selectedKeg !== null) {
-      this.setState({
-        selectedKeg: null,
-        editing: false
-      });
-    } else {
-      const { dispatch } = this.props;
-      const action = {
-        type: 'TOGGLE_FORM'
-      }
-      dispatch(action);
-    }
+    const { dispatch } = this.props;
+    const action = a.toggleForm();
+    dispatch(action);
+    this.setState({ selectedKeg: null });
   }
 
   handleEditClick = () => {

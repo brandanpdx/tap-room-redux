@@ -5,8 +5,13 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import kegListReducer from '../reducers/keg-list-reducer';
-const store = createStore(reducer);
 import { Provider } from 'react-redux';
+
+const store = createStore(reducer);
+
+store.subscribe(() =>
+  console.log(store.getState())
+);
 
 ReactDOM.render(
   <Provider store={store}>

@@ -4,6 +4,7 @@ import KegList from './KegList.js';
 import KegDetail from './KegDetail.js';
 import EditKegForm from './EditKegForm.js';
 import { connect } from 'react-redux';
+import PropTypes from "prop-types";
 
 
 
@@ -38,11 +39,19 @@ class KegControl extends React.Component {
   }
 
   handleEditingKegInList = (kegToEdit) => {
-    const editedMasterKegList = this.state.masterKegList
-      .filter(keg => keg.id !== this.state.selectedKeg.id)
-      .concat(kegToEdit);
-    this.setState({
-      masterKegList: editedMasterKegList,
+    const { dispatch } = this.props;
+    const { id, name, brand, price, ABV, quantity } = kegToEdit;
+    const action = {
+      type: 'EDIT_KEG',
+      id: id,
+      name: name,
+      brand: brand,
+      price: price,
+      ABV: ABV,
+      quantity: quantity,
+    }
+    dispatch(action);
+    this.setState({ 
       editing: false,
       selectedKeg: null
     });
@@ -74,11 +83,13 @@ class KegControl extends React.Component {
   }
 
   handleDeletingKeg = (id) => {
-    const newMasterKegList = this.state.masterKegList.filter(keg => keg.id !== id);
-    this.setState({
-      masterKegList: newMasterKegList,
-      selectedKeg: null
-    });
+    const { dispatch } = this.props;
+    const action = {
+      type: 'DELETE_KEG',
+      id: id
+    }
+    dispatch(action);
+    this.setState({ selectedKeg: null });
   }
 
   handleChangingSelectedKeg = (id) => {
@@ -144,6 +155,16 @@ class KegControl extends React.Component {
   }
 }
 
-KegControl = connect()(KegControl);
+KegControl.propTypes = {
+  masterKegList: PropTypes.object
+};
+
+const mapStateToProps = state => {
+  return {
+    masterKegList: state
+  }
+}
+
+KegControl = connect(mapStateToProps)(KegControl);
 
 export default KegControl;  

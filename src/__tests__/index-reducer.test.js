@@ -24,7 +24,7 @@ describe("rootReducer", () => {
 
   test('Check that initial state of kegListReducer matches root reducer', () => {
     const action = {
-      type: 'ADD_KEG',
+      type: 'ADD_BEER',
       name: 'Beer 1',
       brand: 'Beer 1 Brand',
       price: 6,

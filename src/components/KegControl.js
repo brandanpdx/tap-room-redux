@@ -48,15 +48,7 @@ class KegControl extends React.Component {
   handleEditingKegInList = (kegToEdit) => {
     const { dispatch } = this.props;
     const { id, name, brand, price, ABV, quantity } = kegToEdit;
-    const action = {
-      type: 'EDIT_KEG',
-      id: id,
-      name: name,
-      brand: brand,
-      price: price,
-      ABV: ABV,
-      quantity: quantity,
-    }
+    const action = a.addKeg(kegToEdit);
     dispatch(action);
     this.setState({ 
       editing: false,
@@ -89,10 +81,8 @@ class KegControl extends React.Component {
 
   handleDeletingKeg = (id) => {
     const { dispatch } = this.props;
-    const action = {
-      type: 'DELETE_KEG',
-      id: id
-    }
+    const action = a.deleteKeg(id);
+    
     dispatch(action);
     this.setState({ selectedKeg: null });
   }
@@ -105,15 +95,7 @@ class KegControl extends React.Component {
   handleAddingNewKegToList = (newKeg) => {
     const { dispatch } = this.props;
     const { id, name, brand, price, ABV, quantity } = newKeg;
-    const action = {
-      type: 'ADD_KEG',
-      id: id,
-      name: name,
-      brand: brand,
-      price: price,
-      ABV: ABV,
-      quantity: quantity,
-    }
+    const action = a.addKeg(newKeg);
     dispatch(action);
     const action2 = {
       type: 'TOGGLE_FORM'

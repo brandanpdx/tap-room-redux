@@ -1,7 +1,7 @@
-# Tap Room
+# Tap Room w/ React Redux
 
 ### An app for a tap room in React where a bar can track their kegs.
-### April 24, 2020
+### May 1, 2020
 #### By: Brandan Sayarath
 
 ## Component Tree
